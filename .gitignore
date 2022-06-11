@@ -1,5 +1,2 @@
-#ignoring node_modules
-node_modules/
-#env File
+node_modules
 .env
-#
