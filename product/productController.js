@@ -48,35 +48,7 @@ exports.createProduct=async (req,res,next)=>{
     }
 
 
-exports.getAllProductStatic=async (req,res,next)=>{
-    try{
-    const result=await productModel.find({})
-    let dateList={}
-    for (let index = 0; index < result.length; index++) {
-      
-      const IntegerDate=Number(result[index].createdAt)
-      const date=new Date(IntegerDate)
-      result[index].createdAt=''+date
-        
-        
-    }
-   
-    result.reviews=undefined
 
-    
-    res.status(200).json({
-        message:"successfully retreived data",
-        result,
-        resultLength:result.length
-    })
-   }
-   catch(e){
-    //console.log("error in retreiving data of static products")
-   // console.log(e.message)
-    next()
-   }
-
-}
 
 exports.getAllProductsDynamic=async (req,res,next)=>{
    
