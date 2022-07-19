@@ -36,11 +36,11 @@ const productRoute=require("./product/productRoute")
 app.get("/api",(req,res)=>{
     res.render("home")
 })
-app.use("/api/storeapp",userRoute)
+app.use("/api",userRoute)
 
 
 
-app.use("/api/storeapp/userpage",(req,res)=>{
+app.use("/api/storeapp",(req,res)=>{
     res.send(`<p>hello chandhu</p>`)
 })
 app.use("/api",productRoute)
