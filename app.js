@@ -38,6 +38,11 @@ app.get("/api",(req,res)=>{
 })
 app.use("/api/storeapp",userRoute)
 
+
+
+app.use("/api/storeapp/userPage",(req,res)=>{
+    res.send(`<p>hello chandhu</p>`)
+})
 app.use("/api",productRoute)
 
 
