@@ -7,11 +7,11 @@ const {signUp,signIn,updateData,logout,getData}=require("./userController.js")
 
 
 //routes
-router.route("/userPage/signUp").post(signUp)
-router.route("/userPage/signIn").post(signIn)
-router.route("/userPage/updateData/:id").post(updateData)
-router.route("/userPage/logout").get(logout)
-router.route("/userPage/getData").get(getData)
+router.route("/userpage/signup").post(signUp)
+router.route("/userpage/signin").post(signIn)
+router.route("/userpage/updatedata/:id").post(updateData)
+router.route("/userpage/logout").get(logout)
+router.route("/userpage/getdata").get(getData)
 
 
 

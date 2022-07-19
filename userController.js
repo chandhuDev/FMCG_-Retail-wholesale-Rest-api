@@ -3,7 +3,7 @@ const cloudinary=require("cloudinary").v2
 const User=require("./userSchema")
 const {cookieToken}=require("./cookieSent")
 
-exports.signUp=async (req,res,next)=>{
+exports.signup=async (req,res,next)=>{
     try{
         var {name,email,password}=req.body;
        
@@ -40,7 +40,7 @@ exports.signUp=async (req,res,next)=>{
 }
 
 
-exports.signIn=async (req,res,next)=>{
+exports.signin=async (req,res,next)=>{
     try{
     var {email,password}=req.body
     if(!email||!password){
@@ -64,7 +64,7 @@ exports.signIn=async (req,res,next)=>{
 
 }
 
-exports.updateData=async (req,res,next)=>{
+exports.updatedata=async (req,res,next)=>{
      try{
          const newData={
             name:req.body.name,
@@ -119,7 +119,7 @@ exports.logout=(req,res,next)=>{
   })
 }
 
-exports.getData=async (req,res,next)=>{
+exports.getdata=async (req,res,next)=>{
     try{
         const user=await User.find().find({age:"20"})
         if(!user){
