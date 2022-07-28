@@ -48,8 +48,6 @@ exports.createProduct=async (req,res,next)=>{
     }
 
 
-
-
 exports.getAllProductsDynamic=async (req,res,next)=>{
    
    try{ 
